@@ -44,12 +44,23 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+         test: /\.(png|svg|jpg|gif)$/,
+         use: [
+            {
+              loader: 'file-loader',
+              options: {
+                outputPath: 'static/images/'
+              }
+            }
+         ]
+       }
     ]
   },
   plugins: [htmlPlugin],
   output: {
     filename: './[name].bundle.js',
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, './docs')
   }
 };
