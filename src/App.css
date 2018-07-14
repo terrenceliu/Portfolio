@@ -4,8 +4,9 @@
 }
 
 html, body {
-	font-size: 10px;
-	font-family: Verdana, sans-serif;
+    font-size: 10px;
+    color: #666;
+    font-family: Verdana, sans-serif;
     background: #fff;
     min-height: 100%;
     height: auto !important;
@@ -26,8 +27,72 @@ a:visited {
 }
 a:hover { 
     text-decoration: none; 
-    color: #666;
+    color: pink;
+}
+
+a img { border: none; }
+
+/*
+* Component
+*/
+
+.page {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.nav {
+    float: left;
+    min-height: 500px;
+    width: 223px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    z-index:100;
+}
+
+.navContainer {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    margin-top: -275px;
+    text-align: left;
+    background-color: white;
+}
+
+.overlay {
+    background: bisque;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: 1.0;
+}
+
+.content {
+    margin-left: 223px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    height: 100vh;
+    vertical-align: baseline;
 }
 
 
-a img { border: none; }
+

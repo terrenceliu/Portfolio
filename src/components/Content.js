@@ -2,53 +2,65 @@ import React, { Component } from 'react';
 
 import styles from './Content.css';
 
+import Lightbox from 'react-images';
+
+import HorizontalScroll from 'react-scroll-horizontal'
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+
+// Content
+const sanFrans = require('./content/sanFrans').default;
+
+const herkimer = require('./content/herkimer').default;
+
 class Content extends Component {
 
     constructor() {
         super()
-        this.state = {
-            images: undefined
+        // this.images = undefined;
+        // this.populateImage();
+
+        // console.log(this.images);
+
+        this.contentMap = {
+            "sanFrans": sanFrans,
+            "herkimer": herkimer
         }
     }
 
-    importAll = (r) => {
-        return r.keys().map(r);
-    }
-
-    populateImage = () => {
-        const images = this.importAll(require.context('../../assets/images/sf', false,/\.(png|jpe?g|svg)$/));
-        console.log(images);
-        this.setState({
-            images: images
-        })
-    }
-    
     /**
      * Life cycle hooks
      */
 
     componentDidMount() {
-        this.populateImage();
+        
     }
 
     render() {
+        const parent = {width: `calc(100vw - 223px)`, height: `500px`};
+
+        const { select } = this.props;
+        
+        const images = this.contentMap[select];
+
+        console.log(images);
+        
         return (
-            <div className={styles.scrollingWrapper}>
-                <div id="content" className = "container">
-                    <div id="img-container">
-                        {
-                            this.state.images &&
-                            this.state.images.map((item) => {
-                                return (
-                                    <a href={item} className="thickbox" rel="gallery-plants">
-                                        <img src={item} heihgt="350"/>
-                                    </a>
-                                );
-                            })
-                        }
-                    </div>
-                </div>
-            </div>
+                <HorizontalScroll
+                    className={styles.contentContainer}
+                    style={parent}
+                    reverseScroll={true}
+                >
+                    {
+                        images &&
+                        images.map(e => {
+                            return (
+                                <img src={e.src} />
+                            );
+                        })
+                    }
+                </HorizontalScroll>
         );
     }
 }
