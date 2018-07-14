@@ -15,7 +15,8 @@ module.exports = {
   devServer: {
     // host: '0.0.0.0',
     disableHostCheck: true,
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -61,6 +62,7 @@ module.exports = {
   plugins: [htmlPlugin],
   output: {
     filename: './[name].bundle.js',
-    path: path.resolve(__dirname, './docs')
+    path: path.resolve(__dirname, './docs'),
+    publicPath: '/'
   }
 };
