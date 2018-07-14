@@ -61,7 +61,7 @@ module.exports = {
   },
   plugins: [htmlPlugin],
   output: {
-    filename: './[name].bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './docs'),
     publicPath: '/'
   }
