@@ -1,0 +1,8 @@
+.container {
+    position: absolute;
+    top: 400px;
+    margin-top: -275px;
+    padding-left: 30px;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

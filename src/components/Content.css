@@ -1,12 +1,13 @@
-img {
-    height: 500px;
-    margin: 0px 15px 0px 15px;
-}
-
 .contentContainer {
     position: absolute;
-    top: 50%;
+    top: 400px;
     margin-top: -275px;
     overflow-y: hidden;
     white-space: nowrap;
 }
+
+img {
+    height: 500px;
+    margin: 0px 100px 0px 100px;
+}
+

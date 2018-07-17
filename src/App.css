@@ -17,14 +17,17 @@ a:link {
     text-decoration: none; 
     color: #666; 
 }
+
 a:active { 
     text-decoration: none; 
-    color: #666; 
+    color: yellow; 
 }
+
 a:visited { 
     text-decoration: none; 
     color: #666; 
 }
+
 a:hover { 
     text-decoration: none; 
     color: pink;
@@ -52,15 +55,40 @@ a img { border: none; }
     width: 223px;
     height: 100vh;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
-    background-color: grey;
+    /* background-color: grey; */
     z-index:100;
+}
+
+.headerContainer {
+    position: absolute;
+    top: 400px;
+    z-index: 10;
+    display: -webkit-flex;
+    display: -ms-flex;
+    justify-content: space-between;
+    margin-top: -330px;
+    text-align: left;
+    background-color: white;
+}
+
+.header {
+    padding: 0px 0px 0px 35px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navContainer {
     position: absolute;
-    top: 50%;
+    top: 400px;
     z-index: 10;
     display: -webkit-flex;
     display: -ms-flex;
@@ -73,8 +101,8 @@ a img { border: none; }
     background-color: white;
 }
 
-.overlay {
-    background: bisque;
+.navOverlay {
+    /* background: bisque; */
     position: absolute;
     top: 0;
     left: 0;

@@ -9,8 +9,8 @@ class About extends Component {
 
     render() {
         return (
-            <div>
-                This is about page.
+            <div className={styles.container}>
+                Github // Instagram // E-Mail
             </div>
         )
     }

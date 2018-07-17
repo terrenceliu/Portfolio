@@ -14,18 +14,33 @@ class App extends Component {
     constructor() {
         super();
     }
-    
+      
     render() {
         return (
             <Router>
                 <div className={styles.page}>
                     <div className={styles.nav}>
+                        <div className={styles.headerContainer}>
+                            <p className={styles.header}>
+                                <Link to="/">
+                                    Terrence Liu
+                                </Link>
+                            </p>
+                        </div>
                         <div className={styles.navContainer}>
                             <NavBar />
-                        </div>
-                        <div className={styles.overlay}></div>
+                        </div> 
+                        <div className={styles.navOverlay}></div>
                     </div>
                     <div className={styles.content}>
+                        <Route
+                            path="/washington_st"
+                            component={() => 
+                                <Content
+                                    select="washington"
+                                />
+                            }
+                        />
                         <Route 
                             path="/sanFrans"
                             component={() => 
@@ -38,6 +53,14 @@ class App extends Component {
                             component={() => 
                                 <Content
                                     select="herkimer"
+                                />
+                            }
+                        />
+                        <Route
+                            path="/winter"
+                            component={() => 
+                                <Content
+                                    select="winter"
                                 />
                             }
                         />

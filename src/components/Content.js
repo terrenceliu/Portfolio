@@ -11,8 +11,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // Content
 const sanFrans = require('./content/sanFrans').default;
-
 const herkimer = require('./content/herkimer').default;
+const washington_street = require('./content/washinton_street').default;
+const winter = require('./content/winter').default;
 
 class Content extends Component {
 
@@ -25,7 +26,9 @@ class Content extends Component {
 
         this.contentMap = {
             "sanFrans": sanFrans,
-            "herkimer": herkimer
+            "herkimer": herkimer,
+            "washington": washington_street,
+            "winter": winter
         }
     }
 
@@ -44,7 +47,9 @@ class Content extends Component {
         
         const images = this.contentMap[select];
 
-        console.log(images);
+        // console.log(images);
+
+        console.log(this.props.location);
         
         return (
                 <HorizontalScroll
