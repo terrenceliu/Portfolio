@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import styles from './Content.css';
 
-import Lightbox from 'react-images';
+// import Lightbox from 'react-images';
 
 import HorizontalScroll from 'react-scroll-horizontal'
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 // Content
@@ -33,6 +33,7 @@ class Content extends Component {
     }
 
     /**
+     * 
      * Life cycle hooks
      */
 
@@ -45,11 +46,18 @@ class Content extends Component {
 
         const { select } = this.props;
         
-        const images = this.contentMap[select];
+        const images = this.contentMap[select].img;
+        
+        const margin = this.contentMap[select].margin;
 
+        console.log("Images", images);
+        console.log("Margin", margin);
+
+        const imgStyle = {
+            height: '500px',
+            margin: `0px ${margin}px 0px ${margin}px`
+        };
         // console.log(images);
-
-        console.log(this.props.location);
         
         return (
                 <HorizontalScroll
@@ -61,7 +69,9 @@ class Content extends Component {
                         images &&
                         images.map(e => {
                             return (
-                                <img src={e.src} />
+                                <img 
+                                    src={e.src}
+                                    style={imgStyle} />
                             );
                         })
                     }

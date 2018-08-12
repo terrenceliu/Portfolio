@@ -9,12 +9,13 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Content from './components/Content';
 import About from './components/About';
+import Homepage from './components/Homepage';
 
 class App extends Component {
     constructor() {
         super();
     }
-      
+    
     render() {
         return (
             <Router>
@@ -33,6 +34,14 @@ class App extends Component {
                         <div className={styles.navOverlay}></div>
                     </div>
                     <div className={styles.content}>
+                        <Route
+                            exact
+                            path="/"
+                            component={() => 
+                                <Homepage
+                                />
+                            }
+                        />
                         <Route
                             path="/washington_st"
                             component={() => 
@@ -69,7 +78,7 @@ class App extends Component {
                             component={() => 
                                 <About />
                             }
-                        />  
+                        />
                     </div>
                 </div>
             </Router>

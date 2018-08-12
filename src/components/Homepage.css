@@ -1,13 +1,9 @@
-.contentContainer {
+.container {
     position: absolute;
     top: 400px;
     margin-top: -275px;
     overflow-y: hidden;
     white-space: nowrap;
-}
-
-/* img {
+    width: calc(100vw - 223px);
     height: 500px;
-    margin: 0px 100px 0px 100px;
-} */
-
+}
