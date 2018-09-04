@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --content-base ./src",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --config webpack.prod.js",
     "watch": "webpack --watch",
     "serve": "node index.js",
     "dev": "nodemon index.js"
@@ -33,6 +33,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "compression-webpack-plugin": "^1.1.12",
     "express": "^4.16.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -41,6 +42,7 @@
     "react-scroll-horizontal": "^1.5.0",
     "react-scroll-to-component": "^1.0.2",
     "react-scrollbar": "^0.5.4",
-    "react-swipeable-views": "^0.12.14"
+    "react-swipeable-views": "^0.12.14",
+    "webpack-merge": "^4.1.4"
   }
 }

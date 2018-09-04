@@ -9,7 +9,7 @@ app.get('*.js', function (req, res, next) {
     next();
 });
 
-app.use(express.static(__dirname + '/docs/'));
+app.use(express.static(__dirname + '/dist/'));
 
 var port = process.env.PORT || 8081;
 
