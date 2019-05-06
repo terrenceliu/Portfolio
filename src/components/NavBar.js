@@ -39,6 +39,14 @@ class NavBar extends Component {
                             <div>
                                 <li className={styles.sectionItem}>
                                     <NavLink 
+                                        to="/town"
+                                        activeClassName={styles.selectedItem}
+                                        >
+                                        城
+                                    </NavLink>
+                                </li>
+                                <li className={styles.sectionItem}>
+                                    <NavLink 
                                         to="/washington_st"
                                         activeClassName={styles.selectedItem}
                                         >
@@ -46,14 +54,14 @@ class NavBar extends Component {
                                     </NavLink>
                                 </li>
                                 
-                                <li className={styles.sectionItem}>
+                                {/* <li className={styles.sectionItem}>
                                     <NavLink 
                                         to="/sanFrans"
                                         activeClassName={styles.selectedItem}
                                         >
                                         San Franscico
                                     </NavLink>
-                                </li>
+                                </li> */}
                                 
                                 <li className={styles.sectionItem}>
                                     <NavLink 

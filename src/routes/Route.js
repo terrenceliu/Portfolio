@@ -4,8 +4,18 @@ const sanFrans = require('./content/sanFrans').default;
 const herkimer = require('./content/herkimer').default;
 const washington_street = require('./content/washinton_street').default;
 const winter = require('./content/winter').default;
+const town = require('./content/town').default;
 
 const route = ([
+    {
+        name: '城',
+        route: '/town',
+        images: town,
+        styles: {
+            height: `500px`,
+            margin: `0px 100px 0px 100px`
+        }
+    },
     {
         name: 'San Francisco',
         route: '/sanfrans',

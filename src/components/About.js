@@ -10,7 +10,7 @@ class About extends Component {
     render() {
         return (
             <div className={styles.container}>
-                <a src="#"> Github </a> // <a src="#"> Instagram </a> // E-Mail: <a src="#"> terrenceliu@rice.edu </a>
+                <a href="https://github.com/terrenceliu"> Github </a> // <a href="https://www.instagram.com/teryncl/"> Instagram </a> // E-Mail: <a src="#"> terrenceliu@rice.edu </a>
             </div>
         )
     }

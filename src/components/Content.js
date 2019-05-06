@@ -14,6 +14,7 @@ const sanFrans = require('./content/sanFrans').default;
 const herkimer = require('./content/herkimer').default;
 const washington_street = require('./content/washinton_street').default;
 const winter = require('./content/winter').default;
+const town = require('./content/town').default;
 
 class Content extends Component {
 
@@ -28,7 +29,8 @@ class Content extends Component {
             "sanFrans": sanFrans,
             "herkimer": herkimer,
             "washington": washington_street,
-            "winter": winter
+            "winter": winter,
+            "town": town
         }
     }
 

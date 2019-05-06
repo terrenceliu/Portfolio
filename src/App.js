@@ -43,6 +43,14 @@ class App extends Component {
                             }
                         />
                         <Route
+                            path="/town"
+                            component={() => 
+                                <Content
+                                    select="town"
+                                />
+                            }
+                        />
+                        <Route
                             path="/washington_st"
                             component={() => 
                                 <Content
